@@ -1,3 +1,6 @@
+autoload -U compinit
+compinit
+
 if [ -f /opt/dev/dev.sh ]
 then
     export SHOPIFY_LOCAL=1
@@ -11,9 +14,6 @@ fi
 
 . ~/.zsh/functions.zsh
 
-autoload -U compinit
-
-compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' menu select
 fpath=(/usr/local/share/zsh-completions $fpath)
